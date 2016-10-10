@@ -27,7 +27,7 @@ var crowbar = {
 							fill += '<a title="hello">'+o.name+'</a>; ';
 						});
 						fill += '</tr><tr><td colspan="8"> <b>Skills:</b> '
-						$.each(o.skills,function(i,o){
+						$.each(character.skills,function(i,o){
 							fill += '<a title="hello">'+o.name+'</a>; ';
 						});
 						fill += '</td></tr></table>';
