@@ -17,7 +17,7 @@ var crowbar = {
 						fill += '</td></tr><tr><td style="border: 1px solid; border-left:0px none">';
 						fill += 'HP</td><td style="border: 1px solid;">'+ character.attributes.hpValue+'</td><td style="border: 1px solid;">Will</td><td style="border: 1px solid;">'+ character.attributes.willValue+'</td><td style="border: 1px solid;">Per</td><td style="border: 1px solid;">'+ character.attributes.perValue+'</td><td style="border: 1px solid;">FP</td><td style="border: 1px solid; border-right:0px none">'+character.attributes.fpValue;
 						fill += '</td></tr><tr><td style="border: 1px solid; border-left:0px none">';
-						fill += 'BS</td><td style="border: 1px solid;">'+ character.attributes.bsValue+'</td><td style="border: 1px solid;">BM</td><td style="border: 1px solid;">'+ character.attributes.bmValue+'</td><td style="border: 1px solid;">Dodge</td><td style="border: 1px solid;">'+ o.attributes.dodgeValue+'</td><td style="border: 1px solid;">SM</td><td style="border: 1px solid; border-right:0px none">'+o.attributes.smValue;
+						fill += 'BS</td><td style="border: 1px solid;">'+ character.attributes.bsValue+'</td><td style="border: 1px solid;">BM</td><td style="border: 1px solid;">'+ character.attributes.bmValue+'</td><td style="border: 1px solid;">Dodge</td><td style="border: 1px solid;">'+ character.attributes.dodgeValue+'</td><td style="border: 1px solid;">SM</td><td style="border: 1px solid; border-right:0px none">'+character.attributes.smValue;
 						fill += '</tr><tr><td colspan="8" style="border-bottom:1px solid black"> <b>Traits:</b> '
 						$.each(character.advantages,function(i,o){
 							fill += '<a title="hello">'+o.name+'</a>; ';
