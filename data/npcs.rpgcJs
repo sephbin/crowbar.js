@@ -1,9 +1,9 @@
 npcList = {
 "Draugr": {"name":"Draugr",
-	"attributes":{"stValue":"15",
-		"dxValue":"0",
-		"iqValue":"0",
-		"htValue":"15",
+	"attributes":{"stOffValue":"5",
+		"dxOffValue":"0",
+		"iqOffValue":"0",
+		"htValue":"5",
 		"hpOffValue":"5",
 		"willOffValue":"0",
 		"perOffValue":"0",
@@ -76,9 +76,9 @@ npcList = {
 "race":"Draugr","occupation":"Sentinel","status":"undead","id":"npcdraugr001","connection":[]},
 "Irish Warrior": {"name":"Irish Warrior",
 	"attributes":{
-		"stValue":"1",
-		"dxValue":"2",
-		"iqValue":"0",
+		"stOffValue":"1",
+		"dxOffValue":"2",
+		"iqOffValue":"0",
 		"htValue":"1",
 		"bsMod":"0.25"
 	},
@@ -116,10 +116,10 @@ npcList = {
 		{"name":"Hiking","challenge":"A", "relative":"HT", "rank":"3"},
 		{"name":"Stealth","challenge":"A", "relative":"DX", "rank":"3"}, 
 		{"name":"First Aid","challenge":"E", "relative":"IQ", "rank":"3"},
-		{"name":"Savoir-Faire (Military)","challenge":"E","relative":"IQ"},
-		{"name":"Strategy","challenge":"H","relative":"IQ"},
-		{"name":"Tactics","challenge":"H","relative":"IQ"},
-		{"name":"Intimidation","challenge":"A","relative":"Will"}
+		{"name":"Savoir-Faire (Military)","challenge":"E","relative":"IQ","rank":"1"},
+		{"name":"Strategy","challenge":"H","relative":"IQ","rank":"1"},
+		{"name":"Tactics","challenge":"H","relative":"IQ","rank":"1"},
+		{"name":"Intimidation","challenge":"A","relative":"Will","rank":"1"},
 	],
 	"weapons":[
 		{"weapon":"Mace"}
@@ -144,9 +144,9 @@ npcList = {
 "race":"Human","occupation":"Town Defender","status":"alive","id":"npcirwa001","connection":[]},
 "Irish Priest": {"name":"Irish Priest",
 	"attributes":{
-		"stValue":"0",
-		"dxValue":"0",
-		"iqValue":"3",
+		"stOffValue":"0",
+		"dxOffValue":"0",
+		"iqOffValue":"3",
 		"htValue":"0",
 		"hpValue":"0",
 		"willValue":"0",

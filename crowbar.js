@@ -1,5 +1,5 @@
 var crowbar = {
-        npcBlock: function(npcList,system){
+            npcBlock: function(npcList,system){
 			fillObjects = $('div.npcBlock');
 			$.each(fillObjects, function(){
 				content = $(this).attr('content');
@@ -19,16 +19,28 @@ var crowbar = {
 						fill += '</td></tr><tr><td style="border: 1px solid; border-left:0px none">';
 						fill += 'BS</td><td style="border: 1px solid;">'+ character.attributes.bsValue+'</td><td style="border: 1px solid;">BM</td><td style="border: 1px solid;">'+ character.attributes.bmValue+'</td><td style="border: 1px solid;">Dodge</td><td style="border: 1px solid;">'+ character.attributes.dodgeValue+'</td><td style="border: 1px solid;">SM</td><td style="border: 1px solid; border-right:0px none">'+character.attributes.smValue;
 						fill += '</tr><tr><td colspan="8" style="border-bottom:1px solid black"> <b>Traits:</b> '
+						avdLen = character.advantages.length;
 						$.each(character.advantages,function(i,o){
-							fill += '<a title="hello">'+o.name+'</a>; ';
+							fill += '<a title="hello">'+o.name+'</a>';
+							if(i<=(avdLen-2)){
+								fill += '; '
+							}
 						});
 						fill+= '<hr>';
+						davdLen = character.disadvantages.length;
 						$.each(character.disadvantages,function(i,o){
-							fill += '<a title="hello">'+o.name+'</a>; ';
+							fill += '<a title="hello">'+o.name+'</a>';
+							if(i<=(davdLen-2)){
+								fill += '; '
+							}
 						});
 						fill += '</tr><tr><td colspan="8"> <b>Skills:</b> '
+						skillLen = character.skills.length;
 						$.each(character.skills,function(i,o){
-							fill += '<a title="hello">'+o.name+'</a>; ';
+							fill += '<a title="hello">'+o.name+'-'+o.value+'</a>';
+							if(i<=(skillLen-2)){
+								fill += '; '
+							}
 						});
 						fill += '</td></tr></table>';
 						fill += '</div>';
@@ -47,6 +59,10 @@ var crowbar = {
 			// console.log("CALCULATE!")
 			console.log(character);
 			character.attributes.smValue =		crowbar.checkValue(character.attributes.smValue);
+			character.attributes.stValue =		parseInt(crowbar.checkValue(character.attributes.stOffValue))+10;
+			character.attributes.dxValue =		parseInt(crowbar.checkValue(character.attributes.dxOffValue))+10;
+			character.attributes.iqValue =		parseInt(crowbar.checkValue(character.attributes.iqOffValue))+10;
+			character.attributes.htValue =		parseInt(crowbar.checkValue(character.attributes.htOffValue))+10;
 			character.attributes.stCost =		Math.ceil(((crowbar.checkValue(character.attributes.stValue))-10)*10*(1-(character.attributes.smValue*.1)));
 			character.attributes.dxCost =		((crowbar.checkValue(character.attributes.dxValue))-10)*20;
 			character.attributes.iqCost =		((crowbar.checkValue(character.attributes.iqValue))-10)*20;
@@ -163,6 +179,33 @@ var crowbar = {
 			// character.attributes.uptValue = character.attributes.ptLimit-costTotal;
 
 			// $.each(a, returnAttr);
+			// SKILL CALC
+			sLT={"E":0, "A":-1, "H":-2, "VH":-3, "DX":"dxValue", "IQ":"iqValue", "HT":"htValue", "Per":"perValue", "Will":"willValue"};
+			$.each(character.skills, function(i,o){
+				if(o.rank=="1"||o.rank=="2"){
+					o.cost=o.rank;
+				}else{
+					o.cost=(parseInt(o.rank)-2)*4;
+				}
+				modifier=(sLT[o.challenge]+parseInt(o.rank));
+				abName=sLT[o.relative];
+				console.log(abName);
+				console.log(character.attributes[abName])
+				o.value=parseInt(character.attributes[abName])+modifier;
+				if(modifier==0){
+					modifier="";
+					operator="";
+				}
+				if(modifier>0){
+					operator="+";
+				}
+				if(modifier<0){
+					operator="";
+				}
+				o.rel=o.relative+operator+modifier;
+				o.parry=Math.floor(parseInt(o.value)/2)+3;
+				console.log(o);
+			});
 		},
 		generatePool: function(){
 			$.each(characterList,function(i,object){
