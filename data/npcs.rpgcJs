@@ -1,54 +1,32 @@
 npcList = {
-"Draugr": {"name":"Draugr",
-	"attributes":{"stOffValue":"5",
-		"dxOffValue":"0",
-		"iqOffValue":"0",
-		"htValue":"5",
-		"hpOffValue":"5",
-		"willOffValue":"0",
+"Aboleth": {"name":"Aboleth",
+	"attributes":{"stOffValue":"23",
+		"dxOffValue":"1",
+		"iqOffValue":"5",
+		"htValue":"4",
+		"hpOffValue":"0",
+		"willOffValue":"18",
 		"perOffValue":"0",
 		"fpOffValue":"0"},
 	"dr":{
-		"headDR":"3",
-		"faceDR":"3",
-		"eyeDR":"0",
-		"neckDR":"3",
-		"torsoDR":"3",
-		"lArmDR":"3",
-		"rArmDR":"3",
-		"lHandDR":"3",
-		"rHandDR":"3",
-		"lLegDR":"3",
-		"rLegDR":"3",
-		"lFootDR":"3",
-		"rFootDR":"3"},
+		"headDR":"8",
+		"faceDR":"6",
+		"eyeDR":"6",
+		"neckDR":"6",
+		"torsoDR":"6",
+		"lArmDR":"6",
+		"rArmDR":"6",
+		"lHandDR":"6",
+		"rHandDR":"6",
+		"lLegDR":"6",
+		"rLegDR":"6",
+		"lFootDR":"6",
+		"rFootDR":"6"},
 	"advantages":[
-		{"name":"Damage Resistance 3", "cost":"15"},
-		{"name":"Doesn't Breathe", "cost":"20"},
-		{"name":"Doesn't Eat Or Drink", "cost":"10"},
-		{"name":"Fearlessness 5", "cost":"10"},
-		{"name":"High Pain Threshold", "cost":"10"},
-		{"name":"Immunity (Metabolic hazards)", "cost":"30"},
-		{"name":"Injury Tolerance (No Blood, Unliving)", "cost":"25"},
-		{"name":"Night Vision 9", "cost":"9"},
-		{"name":"Single-Minded", "cost":"5"},
-		{"name":"Temperature Tolerance 10", "cost":"10"},
-		{"name":"Unaging", "cost":"15"}
+		{"name":"Damage Resistance 3", "cost":"15"}
 		],
 	"disadvantages":[
-		{"name":"Bad Temper (12)", "cost":"-10"},
-		{"name":"Bloodlust (12)", "cost":"-10"},
-		{"name":"Dependency (Lie in own tomb 1/3 of time, occasional, daily)", "cost":"-60"},
-		{"name":"Disturbing Voice", "cost":"-10"},
-		{"name":"Dread (Consecrated items, rare)", "cost":"-5"},
-		{"name":"Frightens Animals", "cost":"-10"},
-		{"name":"Intolerance (Living)", "cost":"-10"},
-		{"name":"Social Stigma (Dead)", "cost":"-20"},
-		{"name":"Unhealing (Total)", "cost":"-30"},
-		{"name":"Vulnerability (Fire, very common, x3)", "cost":"-60"},
-		{"name":"Weakness (Sunlight, very common, 1d/5-mins)", "cost":"-30"},
-		{"name":"Supernatural Features (No Body Heat, Pallor)", "cost":"-15"},
-		{"name":"Sterile", "cost":"0"}
+		{"name":"Bad Temper (12)", "cost":"-10"}
 		],
 	"skills":[
 		{"name":"Survival (Mountain)","challenge":"A","relative":"Per","rank":"4"}
@@ -73,185 +51,4 @@ npcList = {
 	"possessions":[
 		{"name":"Stein","location":"Bag","value":"0","weight":"1"}
 	],
-"race":"Draugr","occupation":"Sentinel","status":"undead","id":"npcdraugr001","connection":[]},
-"Irish Warrior": {"name":"Irish Warrior",
-	"attributes":{
-		"stOffValue":"1",
-		"dxOffValue":"2",
-		"iqOffValue":"0",
-		"htValue":"1",
-		"bsMod":"0.25"
-	},
-	"dr":{
-		"headDR":"2",
-		"faceDR":"0",
-		"eyeDR":"0",
-		"neckDR":"0",
-		"torsoDR":"0",
-		"lArmDR":"0",
-		"rArmDR":"0",
-		"lHandDR":"0",
-		"rHandDR":"0",
-		"lLegDR":"0",
-		"rLegDR":"0",
-		"lFootDR":"0",
-		"rFootDR":"0"},
-	"advantages":[
-		{"name": "Block 1", "cost":"5"},
-		{"name": "High Pain Threshold", "cost":"10"},
-		{"name": "Fit", "cost":"5"}
-		],
-	"disadvantages":[
-		{"name":"Fanaticism (Catholosism)", "cost":"-15"},
-		{"name":"Code of Honor (Soldier's)", "cost":"-10"},
-		{"name":"Bloodlust", "cost":"-10"},
-		{"name":"Overconfidence", "cost":"-5"}
-		],
-	"skills":[
-		{"name":"Axe/Mace", "challenge":"A", "relative":"DX", "rank":"3"},
-		{"name":"Shield", "challenge":"E", "relative":"DX", "rank":"3"},
-		{"name":"Sling", "challenge":"H", "relative":"DX", "rank":"2"},
-		{"name":"Soldier", "challenge":"A", "relative":"IQ", "rank":"4"},
-		{"name":"Choose", "challenge":"-", "relative":"-", "rank":"20"},
-		{"name":"Hiking","challenge":"A", "relative":"HT", "rank":"3"},
-		{"name":"Stealth","challenge":"A", "relative":"DX", "rank":"3"}, 
-		{"name":"First Aid","challenge":"E", "relative":"IQ", "rank":"3"},
-		{"name":"Savoir-Faire (Military)","challenge":"E","relative":"IQ","rank":"1"},
-		{"name":"Strategy","challenge":"H","relative":"IQ","rank":"1"},
-		{"name":"Tactics","challenge":"H","relative":"IQ","rank":"1"},
-		{"name":"Intimidation","challenge":"A","relative":"Will","rank":"1"},
-	],
-	"weapons":[
-		{"weapon":"Mace"}
-	],
-	"rweapons":[
-		{"weapon":"Sling"}
-	],
-	"languages":[
-		{"name":"Gaelic","spoken":"Fluent","written":"None"}
-	],
-	"cultures":[
-		{"name":"Irish"}
-	],
-	"reactions":{
-		"appearance":"Standard",
-		"status":"0",
-		"reputations":[]
-	},
-	"possessions":[
-		{"name":"Stein","location":"Bag","value":"0","weight":"1"}
-	],
-"race":"Human","occupation":"Town Defender","status":"alive","id":"npcirwa001","connection":[]},
-"Irish Priest": {"name":"Irish Priest",
-	"attributes":{
-		"stOffValue":"0",
-		"dxOffValue":"0",
-		"iqOffValue":"3",
-		"htValue":"0",
-		"hpValue":"0",
-		"willValue":"0",
-		"perValue":"0",
-		"fpValue":"0"
-	},
-	"dr":{
-		"headDR":"2",
-		"faceDR":"0",
-		"eyeDR":"0",
-		"neckDR":"0",
-		"torsoDR":"0",
-		"lArmDR":"0",
-		"rArmDR":"0",
-		"lHandDR":"0",
-		"rHandDR":"0",
-		"lLegDR":"0",
-		"rLegDR":"0",
-		"lFootDR":"0",
-		"rFootDR":"0"},
-	"advantages":[
-		{"name":"Clerical Investment 2 (Christian)","cost":"10"},
-		{"name":"Legal Immunity","cost":"5"},
-		/*and 20 points chosen from*/
-		{"name":"Awareness","cost":"15"},
-		{"name":"Blessed","cost":"10"},
-		{"name":"Divination Talent","cost":"5"},
-		{"name":"Divine Favor","cost":"20"},
-		{"name":"Higher Purpose","cost":"5"},
-		{"name":"Oracle","cost":"15"},
-		{"name":"Sanctity","cost":"5"},
-		{"name":"Spirit Empathy","cost":"10]"},
-		],
-	"disadvantages":[
-		{"name":"Duty (to Church, 12 or less)","cost":"-10"},
-		{"name":"Vow (Chastity)","cost":"-5"},
-		// and another -25 points chosen from
-		{"name":"Disciplines of Faith (Asceticism or Monasticism)","cost":"-15/-10"},
-		{"name":"Extreme Fanaticism","cost":"-15"},
-		{"name":"Fanaticism","cost":"-15"},
-		{"name":"Hidebound","cost":"-5"},
-		{"name":"Intolerance (Religious)","cost":"-10"},
-		{"name":"Obsession (Missionary Work)","cost":"-10"},
-		{"name":"Odious Personal Habits (Preaching or Dogmatic)","cost":"-10"},
-		{"name":"Pacifism (Self-defense)","cost":"-15"},
-		{"name":"Stubbornness","cost":"-5"},
-		],
-	"skills":[
-		{"name":"Performance/Ritual (Christian)","challenge":"H","relative":"IQ","rank":"3"},
-		{"name":"Theology (Christian)","challenge":"H","relative":"IQ","rank":"3"},
-		{"name":"Bard","challenge":"A","relative":"IQ","rank":"2"},
-		{"name":"Language (Latin)","challenge":"A","relative":"IQ","rank":"2"},
-		{"name":"Law (Church)","challenge":"H","relative":"IQ","rank":"3"},
-		{"name":"Singing", "challenge":"E","relative":"IQ","rank":"2"},
-		{"name":"Writing","challenge":"A","relative":"IQ","rank":"2"},
-		// a total of 10 points in 
-		// Diplomacy (M/H)
-		// History (Church, M/H)
-		// Leadership (M/A)
-		// Savoir-Faire (M/E)
-		// Teaching (M/A)
-		// Language (Norse, M/A)
-		// Literature (Christian, M/H)
-	],
-	"weapons":[
-		{"weapon":"Mace"}
-	],
-	"rweapons":[
-		{"weapon":"Sling"}
-	],
-	"languages":[
-		{"name":"Gaelic","spoken":"Fluent","written":"None"}
-	],
-	"cultures":[
-		{"name":"Irish"}
-	],
-	"reactions":{
-		"appearance":"Standard",
-		"status":"0",
-		"reputations":[]
-	},
-	"possessions":[
-		{"name":"Stein","location":"Bag","value":"0","weight":"1"}
-	],
-"race":"Human","occupation":"Town Defender","status":"alive","id":"npcirwa001","connection":[]}
-
-};
-
-
-/*Attributes: ST 10 [0]; DX 10 [0]; IQ 13 [30]; HT 10 [0].
-Advantages: 
-Disadvantages: Duty (to Church, 12 or less) [-10]; Vow
-(Chastity) [-5]; and another -25 points chosen from Disciplines
-of Faith (Asceticism or Monasticism) [-15/-10],
-Extreme Fanaticism [-15], Fanaticism [-15], Hidebound
-[-5], Intolerance (Religious) [-10], Obsession (Missionary
-Work) [-10], Odious Personal Habits (Preaching or
-Dogmatic) [-10]; Pacifism (Self-defense) [-15], and
-Stubbornness [-5].
-Primary Skills: Performance/Ritual (Christian, M/H) IQ [4];
-Theology (Christian, M/H) IQ [4].
-Secondary Skills: Bard (M/A) IQ [2]; Language (Latin, M/A)
-IQ [2]; Law (Church, M/H) IQ [4]; Singing (P/E) IQ+1
-[2]; Writing (M/A) IQ [2].
-Background Skills: a total of 10 points in Diplomacy (M/H);
-History (Church, M/H); Leadership (M/A); Savoir-Faire
-(M/E); Teaching (M/A); Language (Norse, M/A); Literature
-(Christian, M/H).*/
+"race":"Aboleth","occupation":"Monster","status":"Alive","id":"aboleth","connection":[]}}
