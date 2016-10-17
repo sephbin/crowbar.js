@@ -1,53 +1,53 @@
 var crowbar = {
-            npcBlock: function(npcList,system){
-			fillObjects = $('div.npcBlock');
-			$.each(fillObjects, function(){
-				content = $(this).attr('content');
-				console.log(content);
-				character = npcList[content];
-				crowbar.calculateJson(character);
-				if(system=="GURPS"){
-					if(character!=undefined){
-						fill = ""
-						fill += '<div class="cardborder">';
-						fill += '<table style="width:100%"><tr><th colspan="8">';
-						fill += character.name;
-						fill += '</th></tr><tr><td style="border-right:1px solid">';
-						fill += 'ST</td><td style="border-right:1px solid">'+ character.attributes.stValue+'</td><td style="border-right:1px solid">DX</td><td style="border-right:1px solid">'+ character.attributes.dxValue+'</td><td style="border-right:1px solid">IQ</td><td style="border-right:1px solid">'+ character.attributes.iqValue+'</td><td style="border-right:1px solid">HT</td><td>'+character.attributes.htValue;
-						fill += '</td></tr><tr><td style="border: 1px solid; border-left:0px none">';
-						fill += 'HP</td><td style="border: 1px solid;">'+ character.attributes.hpValue+'</td><td style="border: 1px solid;">Will</td><td style="border: 1px solid;">'+ character.attributes.willValue+'</td><td style="border: 1px solid;">Per</td><td style="border: 1px solid;">'+ character.attributes.perValue+'</td><td style="border: 1px solid;">FP</td><td style="border: 1px solid; border-right:0px none">'+character.attributes.fpValue;
-						fill += '</td></tr><tr><td style="border: 1px solid; border-left:0px none">';
-						fill += 'BS</td><td style="border: 1px solid;">'+ character.attributes.bsValue+'</td><td style="border: 1px solid;">BM</td><td style="border: 1px solid;">'+ character.attributes.bmValue+'</td><td style="border: 1px solid;">Dodge</td><td style="border: 1px solid;">'+ character.attributes.dodgeValue+'</td><td style="border: 1px solid;">SM</td><td style="border: 1px solid; border-right:0px none">'+character.attributes.smValue;
-						fill += '</tr><tr><td colspan="8" style="border-bottom:1px solid black"> <b>Traits:</b> '
-						avdLen = character.advantages.length;
-						$.each(character.advantages,function(i,o){
-							fill += '<a title="hello">'+o.name+'</a>';
-							if(i<=(avdLen-2)){
-								fill += '; '
-							}
-						});
-						fill+= '<hr>';
-						davdLen = character.disadvantages.length;
-						$.each(character.disadvantages,function(i,o){
-							fill += '<a title="hello">'+o.name+'</a>';
-							if(i<=(davdLen-2)){
-								fill += '; '
-							}
-						});
-						fill += '</tr><tr><td colspan="8"> <b>Skills:</b> '
-						skillLen = character.skills.length;
-						$.each(character.skills,function(i,o){
-							fill += '<a title="hello">'+o.name+'-'+o.value+'</a>';
-							if(i<=(skillLen-2)){
-								fill += '; '
-							}
-						});
-						fill += '</td></tr></table>';
-						fill += '</div>';
-						$(this).html(fill);
+        npcBlock: function(npcList,system){
+				fillObjects = $('div.npcBlock');
+				$.each(fillObjects, function(){
+					content = $(this).attr('content');
+					console.log(content);
+					character = npcList[content];
+					crowbar.calculateJson(character);
+					if(system=="GURPS"){
+						if(character!=undefined){
+							fill = ""
+							fill += '<div class="cardborder">';
+							fill += '<table style="width:100%"><tr><th colspan="8">';
+							fill += character.name;
+							fill += '</th></tr><tr><td style="border-right:1px solid">';
+							fill += 'ST</td><td style="border-right:1px solid">'+ character.attributes.stValue+'</td><td style="border-right:1px solid">DX</td><td style="border-right:1px solid">'+ character.attributes.dxValue+'</td><td style="border-right:1px solid">IQ</td><td style="border-right:1px solid">'+ character.attributes.iqValue+'</td><td style="border-right:1px solid">HT</td><td>'+character.attributes.htValue;
+							fill += '</td></tr><tr><td style="border: 1px solid; border-left:0px none">';
+							fill += 'HP</td><td style="border: 1px solid;">'+ character.attributes.hpValue+'</td><td style="border: 1px solid;">Will</td><td style="border: 1px solid;">'+ character.attributes.willValue+'</td><td style="border: 1px solid;">Per</td><td style="border: 1px solid;">'+ character.attributes.perValue+'</td><td style="border: 1px solid;">FP</td><td style="border: 1px solid; border-right:0px none">'+character.attributes.fpValue;
+							fill += '</td></tr><tr><td style="border: 1px solid; border-left:0px none">';
+							fill += 'BS</td><td style="border: 1px solid;">'+ character.attributes.bsValue+'</td><td style="border: 1px solid;">BM</td><td style="border: 1px solid;">'+ character.attributes.bmValue+'</td><td style="border: 1px solid;">Dodge</td><td style="border: 1px solid;">'+ character.attributes.dodgeValue+'</td><td style="border: 1px solid;">SM</td><td style="border: 1px solid; border-right:0px none">'+character.attributes.smValue;
+							fill += '</tr><tr><td colspan="8" style="border-bottom:1px solid black"> <b>Traits:</b> '
+							avdLen = character.advantages.length;
+							$.each(character.advantages,function(i,o){
+								fill += '<a title="hello">'+o.name+'</a>';
+								if(i<=(avdLen-2)){
+									fill += '; '
+								}
+							});
+							fill+= '<hr>';
+							davdLen = character.disadvantages.length;
+							$.each(character.disadvantages,function(i,o){
+								fill += '<a title="hello">'+o.name+'</a>';
+								if(i<=(davdLen-2)){
+									fill += '; '
+								}
+							});
+							fill += '</tr><tr><td colspan="8"> <b>Skills:</b> '
+							skillLen = character.skills.length;
+							$.each(character.skills,function(i,o){
+								fill += '<a title="hello">'+o.name+'-'+o.value+'</a>';
+								if(i<=(skillLen-2)){
+									fill += '; '
+								}
+							});
+							fill += '</td></tr></table>';
+							fill += '</div>';
+							$(this).html(fill);
+						}
 					}
-				}
-			});
+				});
 		},
 		checkValue: function(value) {
 			if(value==undefined){
@@ -207,7 +207,8 @@ var crowbar = {
 				console.log(o);
 			});
 		},
-		generatePool: function(){
+		generatePool: function(characterList,container){
+			pC = "";
 			$.each(characterList,function(i,object){
 			pC += '<div id="'+i+'"class="character">';
 			pC += '<a class="selector" status="'+object.status+'">'+object.name+'</a>';
@@ -225,7 +226,7 @@ var crowbar = {
 			// pC += '</span>';
 			pC += '</div>';
 			});
-			$('div.pool').html(pC);
+			$(container).html(pC);
 		}
 
 
